@@ -1,2 +1,12 @@
 @import "bootstrap";
 @import "home";
+
+
+a {
+  color: gray;
+}
+
+a:hover {
+  color: teal;
+  text-decoration: none;
+}
