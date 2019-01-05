@@ -1,0 +1,12 @@
+<div class=" my-5">
+  <h3 class="display-5">我的购物车</h3>
+  <% if @cart.line_items.blank? %>
+    <p>购书车中没有图书</p>
+  <% end %>
+</div>
+
+<% if @cart.line_items.present? %>
+  <div id="cart">
+    <%= render @cart %>
+  </div>
+<% end %>

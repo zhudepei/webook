@@ -1,0 +1,19 @@
+<tr>
+  <td>
+    <%= link_to line_item.book do %>
+      <%= line_item.book.title %>
+    <% end %>
+  </td>
+  <td><%= number_to_currency line_item.book.real_price %></td>
+  <td>
+    <div class="btn-group-sm" role="group">
+      <%= link_to '-', minus_line_item_path(line_item), method: :post, remote: true, class: 'btn btn-sm btn-light' %>
+      <%= line_item.quantity %>
+      <%= link_to '+', plus_line_item_path(line_item), method: :post, remote: true, class: 'btn btn-sm btn-light' %>
+    </div>
+  </td>
+  <td>
+    <%= link_to '删除', line_item, method: :delete, class: 'btn btn-sm btn-light' %>
+  </td>
+</tr>
+

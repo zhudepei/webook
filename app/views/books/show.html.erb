@@ -13,7 +13,10 @@
       <p> <%= @book.summary %> </p>
     </div>
     <div class="text-right">
-      <%= link_to '加入购物车', '', method: :post, class: 'btn btn-light' %>
+      <div class="book-price">
+        <span class="badge badge-secondary"><%= number_to_currency @book.real_price %></span>
+      </div>
+      <%= link_to '加入购物车', line_items_path(book_id: @book), method: :post, class: 'btn btn-light' %>
     </div>
   </div>
   <div class="col-3">

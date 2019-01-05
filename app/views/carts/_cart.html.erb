@@ -1,0 +1,23 @@
+<div class="text-right">
+  <%= link_to '清空购物车', cart_path(cart), method: :delete, class: 'btn btn-sm btn-danger', data: { confirm: '确定清空购物车？' } %>
+</div>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">书名</th>
+    <th scope="col">定价</th>
+    <th scope="col">数量</th>
+    <th scope="col">操作</th>
+  </tr>
+  </thead>
+  <tbody>
+  <%= render cart.line_items, cache: true %>
+  </tbody>
+</table>
+
+<h5 class="display-5">订单结算</h5>
+<hr>
+<div class="count text-right">
+  <button type="button" disabled class="btn btn-secondary">合计金额：<%= number_to_currency cart.total_price %></button>
+  <%= link_to '确定下单', '', class: 'btn btn-light' %>
+</div>
