@@ -1,0 +1,9 @@
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: salmon;
+}
+
+.overflow-auto {
+  height: 10rem !important;
+  overflow: scroll;
+}

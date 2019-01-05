@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-3">
+    <div class="book-image">
+      <%= image_tag @book.image, class: 'img-thumbnail' %>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="book-info">
+      <h3 class="display-5"><%= @book.title %></h3>
+      <small class="text-muted"><%= @book.author %></small>
+    </div>
+    <div class="book-summary overflow-auto my-4">
+      <p> <%= @book.summary %> </p>
+    </div>
+    <div class="text-right">
+      <%= link_to '加入购物车', '', method: :post, class: 'btn btn-light' %>
+    </div>
+  </div>
+  <div class="col-3">
+
+  </div>
+</div>

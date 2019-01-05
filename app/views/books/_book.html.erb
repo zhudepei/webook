@@ -1,0 +1,12 @@
+<div class="col-3 my-2">
+  <div class="book-image">
+    <%= link_to book do %>
+      <%= image_tag book.image, class: 'img-thumbnail' %>
+    <% end %>
+  </div>
+  <div class="book-info">
+    <small><%= book.title %></small>
+    <br>
+    <small class="text-muted"><%= book.author %></small>
+  </div>
+</div>
